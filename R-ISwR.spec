@@ -4,7 +4,7 @@
 #
 Name     : R-ISwR
 Version  : 2.0.7
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/ISwR_2.0-7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ISwR_2.0-7.tar.gz
 Summary  : Introductory Statistics with R
@@ -23,11 +23,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521295747
+export SOURCE_DATE_EPOCH=1523310822
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521295747
+export SOURCE_DATE_EPOCH=1523310822
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
