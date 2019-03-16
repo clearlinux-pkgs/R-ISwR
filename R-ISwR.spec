@@ -4,13 +4,13 @@
 #
 Name     : R-ISwR
 Version  : 2.0.7
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/ISwR_2.0-7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ISwR_2.0-7.tar.gz
 Summary  : Introductory Statistics with R
 Group    : Development/Tools
 License  : GPL-2.0+
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
 P. Dalgaard (2008), `Introductory Statistics with R', 2nd ed., Springer Verlag, ISBN 978-0387790534.
@@ -23,11 +23,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523310822
+export SOURCE_DATE_EPOCH=1552772141
 
 %install
+export SOURCE_DATE_EPOCH=1552772141
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1523310822
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -62,8 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library ISwR|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  ISwR || :
 
 
 %files
@@ -127,3 +126,7 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/ISwR/scripts/ex14.R
 /usr/lib64/R/library/ISwR/scripts/ex15.R
 /usr/lib64/R/library/ISwR/scripts/ex16.R
+/usr/lib64/R/library/ISwR/tests/allexercises.R
+/usr/lib64/R/library/ISwR/tests/allexercises.Rout.save
+/usr/lib64/R/library/ISwR/tests/allscripts.R
+/usr/lib64/R/library/ISwR/tests/allscripts.Rout.save
