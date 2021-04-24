@@ -4,7 +4,7 @@
 #
 Name     : R-ISwR
 Version  : 2.0.8
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/ISwR_2.0-8.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ISwR_2.0-8.tar.gz
 Summary  : Introductory Statistics with R
